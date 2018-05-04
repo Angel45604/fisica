@@ -1,0 +1,46 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Physics</title>
+	</head>
+
+<body onload="loadEv()" onclick="addBlock(event)">
+	<script src="engine.js"></script>
+	<script src="main.js"></script>
+<div style="display: flex;">
+	<div class="el">
+	<p>Friction</p><p id="frictionValue">0</p><input type="range" step="0.01" min="0" max="1" id="friction" oninput="setFriction(this.value)">
+	</div>
+	
+	<div class="el" style="flex: 1;">
+	<p>FrictionAir</p><p id="frictionAirValue">0.01</p><input type="range" value="0.01" step="0.001" min="0" max="1" id="frictionAir" oninput="setFrictionAir(this.value)"> 
+	</div>
+
+	<div class="el" style="flex: 1;">
+	<p>e</p><p id="eValue">1</p><input type="range" step="0.01" value="0.01" min="0" max="1" id="restitution" oninput="setE(this.value)"><br>
+	</div>
+
+	<div class="el" style="flex: 1;">
+	<p>Angle</p><p id="angleValue">90°</p><input type="range" value="90" min="0" max="360" step="1" oninput="setAngle(this.value)">
+	</div>
+	<div class="el" style="flex: 1;">
+	<p>Angle2</p><p id="angleValue2">18°</p><input type="range" value="18" min="0" max="180" step="1" oninput="setAngle2(this.value)">
+	</div>
+	<div class="el" style="flex: 1;">
+	<p>Width</p><p id="sizeValueH">100</p><input type="range" value="100" min="10" max="300" id="size" oninput="setSizeH(this.value)">
+	</div>
+
+	<div class="el" style="flex: 1;">
+
+	<p>Height</p><p id="sizeValueV">100</p><input type="range" value="100" min="10" max="300" id="size" oninput="setSizeV(this.value)">
+	</div>
+
+	<div class="el" style="flex: 1;">
+	<p>Density</p><p id="densityValue">0.001</p><input type="range" value="0.001" min="0.0001" max="5" step="0.0001" oninput="setDensity(this.value)">
+	</div>
+
+
+</div>
+	<a href="index.html">Limpiar</a>
+
+</body></html>
